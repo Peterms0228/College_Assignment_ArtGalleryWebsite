@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="WebAssignment.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <%--<link rel="shortcut icon" href="~/logo.ico" type="image/x-icon"/>--%>
+    <link runat="server" rel="shortcut icon" href="~/Images/test.ico" type="image/x-icon"/>
+    <link runat="server" rel="icon" href="~/Images/test.ico" type="image/ico"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width:1100px; margin:0 auto;border-spacing:0px">
+                <tr style="width:1100px; height:50px; border-color:#5F98F3; background-color:white">
+                    <td style="width:110px">
+                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/logo.jpg" PostBackUrl="~/Home.aspx" />
+
+                    </td>
+                    <td style="width:790px" align="center">
+                        <asp:Label ID="Label1" runat="server" Text="Mr.P Artwork Gallery" Font-Bold="True" Font-Names="Bahnschrift" ForeColor="RoyalBlue" Font-Size="40px"></asp:Label>
+                    <br /><b>Collect Artwork/Masterpiece by the world’s leading artists!</b>
+                    </td>
+                    <td style="width:210px; text-align:right">
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="55px" ImageUrl="~/Images/payHistory-icon.png" OnClick="ImageButton3_Click" Width="55px" />
+&nbsp;<asp:ImageButton ID="ImageButton2" runat="server" Height="55px" ImageUrl="~/Images/wishlist.jpg" Width="55px" OnClick="ImageButton2_Click" />
+                        &nbsp;
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="55px" ImageUrl="~/Images/cart.png" Width="55px" CausesValidation="False" OnClick="ImageButton1_Click" />
+                        
+                        <asp:Label ID="lblNumInCart" runat="server" Font-Bold="True" Font-Size="Large">0</asp:Label>
+                    </td>
+                </tr>
+                <tr style="background-color:#5F98F3; width:100px; height:38px " >
+                    <td colspan="3">
+                        <asp:Menu ID="NavMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="20px" OnMenuItemClick="NavMenu_MenuItemClick">
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem Text="Artwork Menu" Value="Artwork Menu"></asp:MenuItem>
+                                <asp:MenuItem Text="View My Artwork" Value="View My Artwork"></asp:MenuItem>
+                                <asp:MenuItem Text="Post Artwork" Value="Post Artwork"></asp:MenuItem>
+                                <asp:MenuItem Text="User Login" Value="User Login"></asp:MenuItem>                                
+                                <asp:MenuItem Text="Registration" Value="Registration"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#F26B6B" BorderColor="#F26B6B" BorderStyle="Outset" ForeColor="White" Height="31px" />
+                            <StaticMenuItemStyle Font-Bold="True" Font-Size="Large" ForeColor="Black" HorizontalPadding="43px" />
+                            <StaticSelectedStyle BackColor="#FF5051" BorderColor="#F66666" BorderStyle="Inset" ForeColor="White" Height="31px" />
+                        </asp:Menu>
+
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="width:1100px; height:80px; background-color:#181818; color:white;" >
+                    <td colspan="2">
+                        
+                        
+                        <p ><asp:Image ID="Image3" runat="server" Height="20px" ImageUrl="~/Images/email.png" style="float:left;margin-left:6px" /> &nbsp;enquiry.mrpartworkgallery@gmail.com</p> 
+                                                                                             
+                        <p ><asp:Image ID="Image4" runat="server" Height="27px" Width="29px" ImageUrl="~/Images/phone.jpg" style="float:left;margin-left:6px" /> &nbsp;+03-4149 5655
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <asp:Label ID="lblDateTime" runat="server" Text="Label" Font-Bold="True" Font-Italic="True" Font-Size="X-Large"></asp:Label>    
+
+                        </p> 
+                                                                        
+                    </td>
+
+                    <td>
+                        <p>Connect With Us</p>
+                        <p>
+                            <asp:Image ID="Image5" runat="server" Height="40px" ImageUrl="~/Images/social.jpg" /></p>
+                    </td>
+
+                </tr>
+                <tr style="width:1100px; height:30px; text-align:center; background-color:black; color:white;" >
+                    <td colspan="3">
+                        &copy;2022 Mr.P Artwork Gallery | All Rights Reserved
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
